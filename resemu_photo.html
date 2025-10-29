@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Resume - Ethan </title>
+<style>
+    :root{
+      --bg:#f6f7fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif; margin:0; background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%); color:#111}
+    .container{max-width:900px;margin:36px auto;padding:24px}
+    .card{display:grid;grid-template-columns:260px 1fr;gap:20px;background:var(--card);border-radius:14px;padding:20px;box-shadow:0 8px 30px rgba(16,24,40,0.08)}
+    .profile{background:linear-gradient(180deg,rgba(37,99,235,0.08),transparent);padding:18px;border-radius:10px;height:100%;}
+    .avatar{width:100%;height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef2ff,#ffffff);font-weight:700;color:var(--accent);font-size:28px}
+    h1{margin:8px 0 2px;font-size:20px}
+    .muted{color:var(--muted);font-size:13px}
+    .section{margin-top:14px}
+    .section h3{margin:0 0 8px;font-size:14px}
+    ul{padding-left:18px;margin:0}
+    li{margin-bottom:8px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px}
+
+    .main h2{margin:0 0 6px}
+    .contact-row{display:flex;gap:12px;flex-wrap:wrap;font-size:14px}
+    .job{padding:12px;border-radius:8px;background:#fbfdff;border:1px solid #eef2ff}
+    .meta{font-size:13px;color:var(--muted)}
+
+    .controls{display:flex;gap:8px;justify-content:flex-end;margin-bottom:10px}
+    button{background:var(--accent);color:#fff;padding:8px 12px;border:0;border-radius:8px;cursor:pointer}
+    button.secondary{background:#fff;color:var(--accent);border:1px solid #c7d2fe}
+    @media (max-width:780px){.card{grid-template-columns:1fr;}.avatar{height:110px}}
+
+    /* make contenteditable areas look clean */
+    [contenteditable]{outline: none;}
+    .editable:focus{box-shadow:0 0 0 3px rgba(37,99,235,0.12);border-radius:6px}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+<div class="container">
+<div class="controls">
+<button id="printBtn">列印 / 儲存為 PDF</button>
+<button class="secondary" id="downloadBtn">下載 HTML</button>
+</div>
+<div class="card">
+<aside class="profile">
+<div class="avatar"><img alt="個人照片" src="image/大頭照.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:10px; display:block;"/></div>
+<h1 class="editable" contenteditable="">顧宸宇</h1>
+<div class="muted small" contenteditable="">應徵職位 / 自我定位</div>
+<div class="section">
+<h3>聯絡方式</h3>
+<div class="contact-row small">
+<div class="editable" contenteditable="">📧 email@example.com</div>
+<div class="editable" contenteditable="">📞 +886-9xx-xxx-xxx</div>
+<div class="editable" contenteditable="">📍 台灣 • 可到職日：YYYY-MM-DD</div>
+</div>
+</div>
+<div class="section">
+<h3>技能</h3>
+<div class="skills">
+<span class="skill" contenteditable="">溝通</span>
+<span class="skill" contenteditable="">專案管理</span>
+<span class="skill" contenteditable="">資料分析</span>
+<span class="skill" contenteditable="">HTML / CSS / JS</span>
+</div>
+</div>
+<div class="section">
+<h3>語言</h3>
+<ul class="small">
+<li contenteditable="">中文（母語）</li>
+<li contenteditable="">英文（讀寫溝通）</li>
+</ul>
+</div>
+</aside>
+<main class="main">
+<h2 class="editable" contenteditable="">個人簡介 / 自我介紹</h2>
+<p class="small editable" contenteditable="">在這裡用 2-4 句話快速說明你的專業背景、強項和求職目標。例：資訊管理系畢業，熟悉資料分析與前端開發，喜歡把複雜問題簡化為清楚流程。</p>
+<div class="section">
+<h3>學歷</h3>
+<div class="job">
+<strong contenteditable="">學校名稱 — 科系 (範例：國立某大學 資訊管理學系)</strong>
+<div class="meta small" contenteditable="">2019 — 2023 • 主修 / 副修（可填畢業或預計畢業）</div>
+<div class="small" contenteditable="">相關課程或學業成就：如 GPA、獲獎、研究/專題名稱。</div>
+</div>
+</div>
+<div class="section">
+<h3>實習 / 工作經歷</h3>
+<div class="job">
+<strong contenteditable="">公司或單位名稱 — 職稱</strong>
+<div class="meta small" contenteditable="">2024.06 — 2024.08 • 工作地點</div>
+<ul class="small">
+<li contenteditable="">• 職責一（以動詞開頭，量化成果）</li>
+<li contenteditable="">• 職責二（例如：提升 XX%，或減少 YY 成本）</li>
+</ul>
+</div>
+</div>
+<div class="section">
+<h3>專案 / 成果</h3>
+<div class="job">
+<strong contenteditable="">專案名稱（連結可另附）</strong>
+<div class="meta small" contenteditable="">2023.09 — 2024.03</div>
+<div class="small" contenteditable="">簡短描述：你在專案中負責的部分與具體成果（數據、技術或使用者回饋）。</div>
+</div>
+</div>
+<div class="section">
+<h3>興趣 / 額外資訊</h3>
+<p class="small" contenteditable="">興趣或證照（例如：TOEIC、學科競賽、志工經驗等）。</p>
+</div>
+</main>
+</div>
+</div>
+<script>
+    // print / save as PDF
+    document.getElementById('printBtn').addEventListener('click', ()=>{
+      window.print();
+    });
+
+    // download current HTML as file
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const html = '<!doctype html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([html], {type: 'text/html;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = '履歷_AU114001001.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    // small UX: press Enter in contenteditable to insert newline instead of finishing
+    document.addEventListener('keydown', function(e){
+      if(e.target && e.target.isContentEditable && e.key === 'Enter'){
+        document.execCommand('insertHTML', false, '<br><br>');
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
